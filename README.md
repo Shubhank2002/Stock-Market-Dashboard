@@ -28,3 +28,5 @@ Challenges Encountered:
 One major challenge was ensuring the charts looked good against the dashboard’s background theme.
 To solve this, I customized grid lines, tooltips, and card styles to blend with the design. Another issue was handling datasets—while real stock data can be large, I structured the API to fetch only relevant records per company to keep performance smooth.
 Managing state between the sidebar and main content was also tricky at first, but the Context API helped simplify the flow. Overall, the project helped me deepen my understanding of data-driven UI development and visualization in React.
+
+
