@@ -40,13 +40,11 @@ const StockDetails = () => {
   ];
   return (
     <div className="flex-1 bg-blue-200 overflow-y-auto p-6 max-h-[100vh]">
-      <header className="flex justify-around items-center mb-6 w-[100%]">
+      <header className="flex justify-center items-center mb-6 w-[100%]">
         <h1 className="text-3xl  text-blue-800/80 text-center underline">
           <strong>{stockdetails.Symbol}</strong> STOCK DATA
         </h1>
-        <span className="text-gray-600 text-sm">
-          Last updated: {stockdetails.Date}
-        </span>
+        
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="bg-gray-50 p-4 rounded-xl shadow border border-gray-200">
