@@ -1,3 +1,9 @@
+Deployed Link: Frontend URL - https://stock-market-dashboard-frontend-0aum.onrender.com
+                Backend URL - https://stock-market-dashboard-frontend-0aum.onrender.com
+
+Both Frontend and Backend are Deployed on Render                
+
+
 Development Approach
 
 The development of this stock market dashboard followed a structured MERN stack approach.
