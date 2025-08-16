@@ -1,5 +1,5 @@
-Deployed Link: Frontend URL - https://stock-market-dashboard-frontend-0aum.onrender.com
-                Backend URL - https://stock-market-dashboard-frontend-0aum.onrender.com
+Deployed Link: Frontend URL - https://stock-market-dashboard-j1tp.onrender.com
+                Backend URL - https://stock-market-dashboard-backend-zmxm.onrender.com
 
 Both Frontend and Backend are Deployed on Render                
 
