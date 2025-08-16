@@ -5,5 +5,9 @@ const GetList=async(req,res)=>{
     
     res.status(200).json(CompanyList)
 }
-
-module.exports={GetList}
+const GetStockDetails=async(req,res)=>{
+    const {stock}=req.params
+    const StockDetails=await StockModel.findOne({Symbol:stock})
+    res.status(200).json(StockDetails)
+}
+module.exports={GetList,GetStockDetails}
