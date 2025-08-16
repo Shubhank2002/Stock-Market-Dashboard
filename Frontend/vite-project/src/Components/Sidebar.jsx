@@ -14,7 +14,7 @@ const Sidebar = () => {
 
     const GET_Company_List=async()=>{
         try {
-            const res=await axios.get('http://localhost:8000/stock')
+            const res=await axios.get('https://stock-market-dashboard-frontend-0aum.onrender.com/stock')
             if(res.data){
                 setCompany_list(res.data)
             }
@@ -32,7 +32,7 @@ const Sidebar = () => {
         else{
             setselected(item.Symbol)
             try {
-                const newstockdetails=await axios.get(`http://localhost:8000/stock/${item.Symbol}`)
+                const newstockdetails=await axios.get(`https://stock-market-dashboard-frontend-0aum.onrender.com/stock/${item.Symbol}`)
                 // console.log(newstockdetails.data)
                 setstockdetails(newstockdetails.data)
             } catch (error) {
