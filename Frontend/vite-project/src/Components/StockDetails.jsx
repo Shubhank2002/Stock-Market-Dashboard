@@ -39,10 +39,10 @@ const StockDetails = () => {
     },
   ];
   return (
-    <div className="flex-1 bg-gray-200 overflow-y-auto p-6 max-h-[100vh]">
+    <div className="flex-1 bg-blue-200 overflow-y-auto p-6 max-h-[100vh]">
       <header className="flex justify-around items-center mb-6 w-[100%]">
-        <h1 className="text-2xl font-bold text-gray-800 text-center">
-          {stockdetails.Symbol} STOCK DATA
+        <h1 className="text-3xl  text-blue-800/80 text-center underline">
+          <strong>{stockdetails.Symbol}</strong> STOCK DATA
         </h1>
         <span className="text-gray-600 text-sm">
           Last updated: {stockdetails.Date}
@@ -50,7 +50,9 @@ const StockDetails = () => {
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="bg-gray-50 p-4 rounded-xl shadow border border-gray-200">
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">OHLC Distribution</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-700">
+            OHLC Distribution
+          </h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
@@ -66,33 +68,51 @@ const StockDetails = () => {
                   <Cell key={`cell-${index}`} fill={color} />
                 ))}
               </Pie>
-              <Tooltip contentStyle={{ backgroundColor: "#f9fafb", borderRadius: "8px" }}/>
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "#f9fafb",
+                  borderRadius: "8px",
+                }}
+              />
               <Legend />
             </PieChart>
           </ResponsiveContainer>
         </div>
         <div className="bg-gray-50 p-4 rounded-xl shadow border border-gray-200">
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">Volume vs Deliverable</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-700">
+            Volume vs Deliverable
+          </h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={volumeData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
               <XAxis dataKey="name" tick={{ fill: "#374151" }} />
               <YAxis tick={{ fill: "#374151" }} />
-              <Tooltip  contentStyle={{ backgroundColor: "#f9fafb", borderRadius: "8px" }}/>
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "#f9fafb",
+                  borderRadius: "8px",
+                }}
+              />
               <Legend />
               <Bar dataKey="Volume" fill="#0088FE" radius={[6, 6, 0, 0]} />
-              <Bar dataKey="DeliverableVolume" fill="#00C49F" radius={[6, 6, 0, 0]} />
+              <Bar
+                dataKey="DeliverableVolume"
+                fill="#00C49F"
+                radius={[6, 6, 0, 0]}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
-      <div className="bg-gray-50 rounded-xl shadow border border-gray-200 overflow-x-auto p-4">
-        <h3 className="text-lg font-semibold mb-4 text-gray-700">Stock Information</h3>
+      <div className="bg-gray-50 rounded-xl shadow border border-gray-200  p-4">
+        <h3 className="text-lg font-semibold mb-4 text-gray-700">
+          Stock Information
+        </h3>
         <table className="w-full text-left border-collapse">
           <tbody className="text-gray-700">
             <tr className="border-b border-gray-200">
-              <td className="p-2 font-semibold">Series</td>
-              <td className="p-2">{stockdetails.Series}</td>
+              <td className="p-2 font-semibold w-1/2">Series</td>
+              <td className="p-2 w-1/2">{stockdetails.Series}</td>
             </tr>
             <tr className="border-b border-gray-200">
               <td className="p-2 font-semibold">VWAP</td>

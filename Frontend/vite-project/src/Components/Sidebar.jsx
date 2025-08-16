@@ -46,7 +46,7 @@ const Sidebar = () => {
       <ul className="list-none flex flex-col gap-15 overflow-y-auto max-h-[70vh] mb-10 items-center ">
         {Company_list && (
             Company_list.map((item,index)=>{
-                return <li key={index} onClick={()=>handleClick(item)} className={`py-3 font-bold px-15 rounded-md cursor-pointer ${selected===item.Symbol? "bg-red-400 text-white":"hover:bg-gray-300 hover:text-white"} transition-colors duration-200`}>{item.Symbol}</li>
+                return <li key={index} onClick={()=>handleClick(item)} className={`py-3 font-bold text-2xl px-15 rounded-md cursor-pointer ${selected===item.Symbol? "bg-red-400 text-white":"hover:bg-gray-300 hover:text-white"} transition-colors duration-200`}>{item.Symbol}</li>
             })
         )}
       </ul>
