@@ -26,7 +26,7 @@ const Sidebar = () => {
         return <div className="text-center w-2xl mx-auto">Loading...</div>
     }
     const handleClick=async(item)=>{
-        if(selected){
+        if(selected===item.Symbol){
             setselected(null)
         }
         else{

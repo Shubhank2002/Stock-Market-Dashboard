@@ -8,7 +8,7 @@ import StockDetails from './StockDetails'
 const Home = () => {
     const {selected,setselected}=useContext(Data)
   return (
-    <div className='flex '>
+    <div className='flex w-screen'>
       <Sidebar/>
       {selected?<StockDetails/>:<Main/>}
     </div>
